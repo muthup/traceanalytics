@@ -16,7 +16,7 @@ yum -y install docker
 yum -y install haproxy
 yum -y install git
 
-git clone https://github.com/muthup/traceanalytics.git
+git clone -b reduced-resource https://github.com/muthup/traceanalytics.git
 
 cd traceanalytics/ant403
 
