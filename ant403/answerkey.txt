@@ -1,8 +1,8 @@
 fluent-bit.conf
 OUTPUT Section
     Host  PREFIX_OSS_DOMAIN
-    HTTP_User PREFIX_OSSDOMAIN_USERNAME
-    HTTP_Passwd PREFIX_OSSDOMAIN_PASSWORD
+    HTTP_User PREFIXOSSDOMAIN_USERNAME
+    HTTP_Passwd PREFIXOSSDOMAIN_PASSWORD
 
 
 otel-collector-config.yml
@@ -14,10 +14,17 @@ trace_analytics_no_ssl.yml
 entry-pipeline:
   sink:
     - opensearch:
-        hosts: [ "https://PREFIX_OSS_DOMAIN:443" ]
-        username: "PREFIX_OSSDOMAIN_USERNAME"
-        password: "PREFIX_OSSDOMAIN_PASSWORD"
+        hosts: [ "https://PREFIXOSS_DOMAIN:443" ]
+        username: "PREFIXOSSDOMAIN_USERNAME"
+        password: "PREFIXOSSDOMAIN_PASSWORD"
 
 setup
 service docker start
 /usr/bin/docker-compose up -d
+
+
+Ordered commands
+cd /tracenalytics/ant403
+service docker start
+check status of app conatiners: docker ps --filter status=running docker ps --filter status=restarting
+pipeline file trace-analytis_no_ssl
