@@ -541,7 +541,7 @@
                             [
                                 "#!/bin/bash -xe\n",
                                 "yum install -y aws-cfn-bootstrap\n",
-                                "wget https://raw.githubusercontent.com/muthup/traceanalytics/main/setup\n",
+                                "wget https://raw.githubusercontent.com/muthup/traceanalytics/reduced-resources/setup\n",
                                 "chmod a+x ./setup\n",
                                 "./setup ",
                                 {
