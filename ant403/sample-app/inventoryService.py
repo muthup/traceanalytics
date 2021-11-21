@@ -16,9 +16,9 @@ from Error import Error
 from requests import get, post
 import flask, os, pkg_resources, socket, random, requests, json
 
-READ_ERROR_RATE_THRESHOLD = 10
-UPDATE_ERROR_RATE_THRESHOLD = 10
-DELETE_ERROR_RATE_THRESHOLD = 10
+READ_ERROR_RATE_THRESHOLD = 0
+UPDATE_ERROR_RATE_THRESHOLD = 0
+DELETE_ERROR_RATE_THRESHOLD = 0
 
 app = Flask(__name__)
 

@@ -27,4 +27,6 @@ Ordered commands
 cd /tracenalytics/ant403
 service docker start
 check status of app conatiners: docker ps --filter status=running docker ps --filter status=restarting
-pipeline file trace-analytis_no_ssl
+pipeline file trace-analytis_no_ssl: OpenSearch URL, username , password
+otel-collector-config.yml: exporter endpoint data-prepper:21890 with a space
+fluent-bit.conf OpenSearch URL

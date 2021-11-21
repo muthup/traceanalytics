@@ -16,7 +16,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import os, pkg_resources, socket, requests, random, json
 
-ERROR_RATE_THRESHOLD = 10
+ERROR_RATE_THRESHOLD = 100
 
 app = Flask(__name__)
 

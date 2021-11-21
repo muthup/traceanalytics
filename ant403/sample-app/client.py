@@ -38,17 +38,6 @@ app.layout = html.Div(id="main", children=[
     html.H1("ANT403 Sample App", style={'textAlign': 'left'}),
     html.Div(style={'padding': 25}),
 
-    # html.Div([
-    #         html.A("Trace Analytics Dashboard", href="http://localhost:5601/app/trace-analytics-dashboards#/",
-    #                style={'justify': 'center'})
-    #     ], style={'horizontalAlign': 'middle','verticalAlign': 'middle'}),
-    # html.Div(style={'padding': 10}),
-    # html.Div([
-    #         html.A("Trace Analytics Services View", href="http://localhost:5601/app/trace-analytics-dashboards#/services",
-    #                style={'justify': 'center'})
-    #     ], style={'horizontalAlign': 'middle','verticalAlign': 'middle'}),
-
-
     html.Div(style={'padding': 25}),
     html.Div([html.Button('Checkout', id='btn-nclicks-1', n_clicks=0, style={'background-color': '#729bb7'})],
              style={'horizontalAlign': 'middle','verticalAlign': 'middle'}),
