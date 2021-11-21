@@ -28,10 +28,10 @@ public class Logging {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Log{");
-        sb.append("service='").append(service).append('\'');
-        sb.append(", message='").append(message).append('\'');
-        sb.append('}');
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("service:").append(service);
+        sb.append(", message:").append(message);
+        sb.append("}");
         return sb.toString();
     }
 }

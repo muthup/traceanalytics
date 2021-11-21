@@ -1,0 +1,23 @@
+fluent-bit.conf
+OUTPUT Section
+    Host  PREFIX_OSS_DOMAIN
+    HTTP_User PREFIX_OSSDOMAIN_USERNAME
+    HTTP_Passwd PREFIX_OSSDOMAIN_PASSWORD
+
+
+otel-collector-config.yml
+exporters:
+  otlp/2:
+    endpoint: data-prepper:21890
+
+trace_analytics_no_ssl.yml
+entry-pipeline:
+  sink:
+    - opensearch:
+        hosts: [ "https://PREFIX_OSS_DOMAIN:443" ]
+        username: "PREFIX_OSSDOMAIN_USERNAME"
+        password: "PREFIX_OSSDOMAIN_PASSWORD"
+
+setup
+service docker start
+/usr/bin/docker-compose up -d

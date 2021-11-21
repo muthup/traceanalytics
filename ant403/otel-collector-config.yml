@@ -6,7 +6,7 @@ receivers:
 
 exporters:
   otlp/2:
-    endpoint: data-prepper:21890
+    endpoint: 
     insecure: true
   logging:
 

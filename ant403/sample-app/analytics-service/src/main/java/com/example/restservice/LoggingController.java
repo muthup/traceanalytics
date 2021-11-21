@@ -28,6 +28,7 @@ public class LoggingController {
         } else {
             return "Dummy";
         }*/
+        System.out.println(logging);
         return "Dummy";
     }
 }

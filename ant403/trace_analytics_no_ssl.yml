@@ -16,9 +16,9 @@ raw-pipeline:
     - otel_trace_raw_prepper:
   sink:
     - opensearch:
-        hosts: [ "https://OSS_DOMAIN:443" ]
-        username: "OSSDOMAIN_USERNAME"
-        password: "OSSDOMAIN_PASSWORD"
+        hosts: [ "https://PREFIX_OSS_DOMAIN:443" ]
+        username: "PREFIX_OSSDOMAIN_USERNAME"
+        password: "PREFIX_OSSDOMAIN_PASSWORD"
         trace_analytics_raw: true
 service-map-pipeline:
   delay: "100"
@@ -29,7 +29,7 @@ service-map-pipeline:
     - service_map_stateful:
   sink:
     - opensearch:
-        hosts: [ "https://OSS_DOMAIN:443" ]
-        username: "OSSDOMAIN_USERNAME"
-        password: "OSSDOMAIN_PASSWORD"
+        hosts: [ "https://PREFIX_OSS_DOMAIN:443" ]
+        username: "PREFIX_OSSDOMAIN_USERNAME"
+        password: "PREFIX_OSSDOMAIN_PASSWORD"
         trace_analytics_service_map: true

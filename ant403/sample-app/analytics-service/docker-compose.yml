@@ -3,8 +3,8 @@ services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.8.1
     ports:
-      - "9201:9201"
-      - "9301:9301"
+      - "9200:9200"
+      - "9300:9300"
     environment:
       - discovery.type=single-node
   analytics-service:
@@ -12,4 +12,4 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-        - "18087:18087"
+        - "8087:8087"

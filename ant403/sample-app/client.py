@@ -253,8 +253,7 @@ def load_main_screen():
 
 
 def get_ref_link(operation, status, trace_id):
-    return [html.Div([html.A("{} {}. {}".format(operation, status, trace_id),
-                  href="http://localhost:5601/app/trace-analytics-dashboards#/traces/{}".format(trace_id))])]
+    return [html.Div([html.H5("{} {}. {}".format(operation, "", trace_id))])]
 
 def get_hexadecimal_trace_id(trace_id: int) -> str:
     return bytes(bytearray.fromhex("{:032x}".format(trace_id))).hex()
