@@ -1,0 +1,7 @@
+11/20/2021
+1. Change description of proxy URL
+2. OpenSearch Dashboard intial dialog instruction
+3. Change README contents
+4. Rename trace_analytics_no_ssl to more descriptive name
+5. Deal with yellow index status
+6. Deal with known error abour m4.2xlarge on us-east-1e
