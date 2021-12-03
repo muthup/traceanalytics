@@ -867,10 +867,10 @@
         "InstanceType": {
             "Description": "Application Containers host EC2 instance type",
             "Type": "String",
-            "Default": "m4.2xlarge",
+            "Default": "r5.2xlarge",
             "AllowedValues": [
-                "m4.4xlarge",
-                "m4.2xlarge"
+                "r5.4xlarge",
+                "r5.2xlarge"
             ],
             "ConstraintDescription": "must be a valid EC2 instance type."
         },
@@ -1000,6 +1000,12 @@
                 "Arch": "HVM64"
             },
             "r3.4xlarge": {
+                "Arch": "HVM64"
+            },
+            "r5.2xlarge": {
+                "Arch": "HVM64"
+            },
+            "r5.4xlarge": {
                 "Arch": "HVM64"
             },
             "r3.8xlarge": {
