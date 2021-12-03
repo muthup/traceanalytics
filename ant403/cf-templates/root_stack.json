@@ -825,7 +825,7 @@
                 "ClusterConfig": {
                     "DedicatedMasterEnabled": false,
                     "InstanceCount": 1,
-                    "InstanceType": "m5.xlarge.search",
+                    "InstanceType": "r5.2xlarge.search",
                     "WarmEnabled": false,
                     "ZoneAwarenessEnabled": false
                 },
