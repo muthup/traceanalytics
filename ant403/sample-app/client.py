@@ -14,8 +14,10 @@ from opentelemetry.sdk.trace.export import (
     SimpleSpanProcessor,
 )
 from opentelemetry.sdk.resources import Resource
+from opentelemetry.instrumentation.logging import LoggingInstrumentor
 from opentelemetry.instrumentation.requests import RequestsInstrumentor
 from urllib3.util.retry import Retry
+
 import os, pkg_resources, socket, requests
 
 OTLP = os.getenv("OTLP") if os.getenv("OTLP") is not None else "localhost"
@@ -105,6 +107,7 @@ otlp_exporter = OTLPSpanExporter(endpoint="{}:55680".format(OTLP), insecure=True
 tracerProvider.add_span_processor(
     SimpleSpanProcessor(otlp_exporter)
 )
+LoggingInstrumentor().instrument(set_logging_format=True)
 RequestsInstrumentor().instrument(tracer_provider=tracerProvider)
 
 retry_strategy = Retry(
@@ -125,7 +128,7 @@ def closeCursorAndDBCnx(cursor, cnx):
 
 
 def setupDB():
-    INSERT_ROWS_CMD = """INSERT INTO Inventory_Items (ItemId, TotalQty) 
+    INSERT_ROWS_CMD = """INSERT INTO Inventory_Items (ItemId, TotalQty)
                            VALUES (%(ItemId)s, %(Qty)s) ON DUPLICATE KEY UPDATE TotalQty = TotalQty + %(Qty)s"""
     data = [
         {"ItemId": "apple", "Qty": 4},
